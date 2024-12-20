@@ -109,7 +109,7 @@ h2{
 }
 
 ul{
-  padding-left: 1rem;
+  padding-left: 1.75rem;
 }
 
 ul li{
@@ -120,4 +120,81 @@ ul li{
   &::marker{
     color: #475467;
   }
+}
+
+.get__recipe{
+  margin-top: 2rem;
+  /* margin-inline: auto;
+  width: 100%;
+  max-width: 594px; */
+  /* height: 109px; */
+
+  background-color: #F0EFEB;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 28px 42px;
+} 
+
+h3{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #141413;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.get__recipe p{
+  font-size: 14px;
+  line-height: 20px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.btn{
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #D17557;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  color: #FAFAF8;
+  padding: 10px 17px;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: all 0.1s linear;
+
+  &:active{
+    transform: scale(0.98);
+  }
+}
+.recipe__container{
+    color: #475467;
+    line-height: 28px;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.recipe__container > *{
+  font-size: 18px;
+  line-height: 28px;
+  color: #475467;
+}
+.recipe__container h3{
+  line-height: 38px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #141413;
+}
+
+.recipe__container > h4{
+  margin-block: 3rem 1rem;
+}
+
+ol{
+  padding-left: 1.75rem;
 }
