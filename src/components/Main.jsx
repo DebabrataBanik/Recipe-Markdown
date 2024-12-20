@@ -1,8 +1,13 @@
 import { useState } from "react"
+import IngredientsList from "./Ingredients/IngredientsList"
+import Recipe from "./Recipe/Recipe"
+import { getRecipeFromMistral } from "../ai"
 
 function Main() {
 
   const [ingredients, setIngredients] = useState([])
+
+  const [recipe, setRecipe] = useState("")
 
   function addIngredient(form) {
     const ingredient = form.get('ingredient')
@@ -10,8 +15,13 @@ function Main() {
     if (ingredient.trim()) {
       setIngredients(prev => [...prev, ingredient])
     }
-
   }
+
+  async function getRecipe() {
+    const generatedRecipe = await getRecipeFromMistral(ingredients)
+    setRecipe(generatedRecipe)
+  }
+
 
   return (
     <main className="container">
@@ -24,18 +34,15 @@ function Main() {
       </form>
 
       {
-        ingredients.length > 0 && (
-          <section className="ingredients__container">
-            <h2>Ingredients on hand:</h2>
-            <ul>
-              {
-                ingredients.map(each => (
-                  <li key={each}>{each}</li>
-                ))
-              }
-            </ul>
-          </section>
-        )
+        ingredients.length > 0 &&
+        <IngredientsList
+          ingredients={ingredients}
+          getRecipe={getRecipe}
+        />
+      }
+
+      {
+        recipe && <Recipe recipe={recipe} />
       }
     </main>
   )
