@@ -9,12 +9,16 @@ function Main() {
 
   const [recipe, setRecipe] = useState("")
 
-  function addIngredient(form) {
-    const ingredient = form.get('ingredient')
+  function addIngredient(e) {
+    e.preventDefault()
+
+    const formData = new FormData(e.target)
+    const ingredient = formData.get('ingredient')
 
     if (ingredient.trim()) {
       setIngredients(prev => [...prev, ingredient])
     }
+    e.target.reset()
   }
 
   async function getRecipe() {
@@ -25,7 +29,7 @@ function Main() {
 
   return (
     <main className="container">
-      <form action={addIngredient} className="form__container">
+      <form onSubmit={addIngredient} className="form__container">
         <label hidden htmlFor="input"></label>
         <input type="text" name="ingredient" id="input" placeholder="e.g. oregano"
           aria-label="add ingredient"
