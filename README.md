@@ -11,7 +11,7 @@ A simple React-based application that suggests recipes based on user-provided in
 - [Built-with](#built-with)
 - [How it Works](#how-it-works)
 - [My Process](#my-process) 
-- [Thoughts](#thoughts)
+- [Continued Development](#continued-development)
 
 ### Overview
 
@@ -64,6 +64,12 @@ This project is a basic implementation of AI integration into a React app. It de
   - In such cases, the API may not respond, and the user might experience delays.
 
 
-### Thoughts
+### Continued Development
+
+- Improve the UI experience and add more content to the intial webpage to provide user with more options.
+- Use a better AI model maybe a paid one.
+- Rendering the AI response more effectively with filtering options. 
+- Feature to modify the `SYSTEM_PROMPT` given to the AI to provide a more desired repsonse. 
+
 
 
