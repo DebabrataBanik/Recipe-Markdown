@@ -19,10 +19,11 @@ This project is a basic implementation of AI integration into a React app. It de
 
 ### Screenshots
 
+![alt text](<public/live site ss.png>)
 
 ### Links
 
-- [Live Demo]()
+- [Live Demo](https://recipe-markdown.vercel.app/)
 
 ### Features
 
@@ -33,7 +34,7 @@ This project is a basic implementation of AI integration into a React app. It de
 ### Built with
 
 - ReactJs
-- Hugging Fac Inference API(using a free model)
+- Hugging Face Inference API(using a free model)
 
 ### How it Works
 
@@ -43,18 +44,25 @@ This project is a basic implementation of AI integration into a React app. It de
 
 ### My Process
 
-1. Setup:
-- Created a React app using Vite.
-- Installed Hugging Face Inference API for integrating AI capabilities.
+1. **Setup**:
+   - Created a React app using Vite.
+   - Installed Hugging Face Inference API for integrating AI capabilities.
 
-2. Development:
+2. **Development**:
+   - Implemented AI model integration to process and render responses.
+   - Designed and built a user-friendly interface with functional components.
 
-- Implemented AI model integration to process and render responses.
-- Designed and built a user-friendly interface with functional components.
+3. **Challenges & Decisions**:
+   - Initially used React 19 beta for its enhanced form-handling capabilities, particularly the action prop in forms, which simplifies operations like preventing default submissions, resetting forms, and accessing input data via formData.
+   - However, due to compatibility issues with react-markdown, a key library for rendering AI responses, I decided to prioritize compatibility and functionality.
 
-3. Challenges & Decisions: 
-- Initially used React 19 beta for its enhanced form-handling capabilities, particularly the action prop in forms, which simplifies operations like preventing default submissions, resetting forms, and accessing input data via formData.
-- However, due to compatibility issues with react-markdown, a key library for rendering AI responses, I decided to prioritize compatibility and functionality.
+### API Limitations
+
+
+  - This app uses a free Hugging Face Inference API model. 
+  - Please note that responses might be suboptimal, especially during high traffic or when the rate limit exceeds.
+  - In such cases, the API may not respond, and the user might experience delays.
+
 
 ### Thoughts
 
