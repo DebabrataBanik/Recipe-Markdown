@@ -179,14 +179,14 @@ h3{
     font-weight: 400;
 }
 
-.recipe__container > *{
+/* .recipe__container > *{
   font-size: 18px;
   line-height: 28px;
   color: #475467;
-}
+} */
 .recipe__container h3{
   line-height: 38px;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 600;
   color: #141413;
 }
