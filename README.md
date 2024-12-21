@@ -19,7 +19,7 @@ This project is a basic implementation of AI integration into a React app. It de
 
 ### Screenshots
 
-![alt text](<public/live site ss.png>)
+![alt text](<public/live site ss2.png>)
 
 ### Links
 
