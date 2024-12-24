@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import IngredientsList from "./Ingredients/IngredientsList"
 import Recipe from "./Recipe/Recipe"
 import { getRecipeFromMistral } from "../ai"
@@ -8,6 +8,20 @@ function Main() {
   const [ingredients, setIngredients] = useState([])
 
   const [recipe, setRecipe] = useState("")
+
+  const recipeSection = useRef(null)
+  // console.log(recipeSection)
+
+  useEffect(() => {
+    if (recipe != '' && recipeSection != null) {
+      recipeSection.current.scrollIntoView({ behavior: 'smooth' })
+      // const yCoord = recipeSection.current.getBoundingClientRect().top + window.scrollY
+      // window.scroll({
+      //   top: yCoord,
+      //   behavior: "smooth"
+      // })
+    }
+  }, [recipe])
 
   function addIngredient(e) {
     e.preventDefault()
@@ -40,6 +54,7 @@ function Main() {
       {
         ingredients.length > 0 &&
         <IngredientsList
+          ref={recipeSection}
           ingredients={ingredients}
           getRecipe={getRecipe}
         />
